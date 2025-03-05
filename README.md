@@ -13,14 +13,15 @@ You may now run the analysis by mounting your titer table directory to a contain
 ```bash
 for titer_table in 204*.csv
 do
+    var=$(echo $titer_table | sed -e 's/.csv//g')
     docker run -v $(pwd):/usr/local/work cameronnguyen/cvrg-antigenic-cartography:version1 \
         --input $titer_table \
-        --xy_lim="-10,10,-10,10" \
-        --prefix myprefix \
-        --out mydir \
+        --xy_lim="-5,5,-5,5" \
+        --prefix $var \
+        --out $var'_dir' \
         --psizes 5,2 \
         --opacity .8,1 \
         --agoverprint FALSE \
-        --agsort FALSE 
+        --agsort TRUE 
 done
 ```
