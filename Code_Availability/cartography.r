@@ -10,7 +10,7 @@ option_list = list(
   make_option(c("--psizes"), type="character", default="5,2",help="Point sizes of Antigen and Sera coordinates on the AC Map. Antigen,Sera. Example: \"5,2\" or \"4.5,1.5\"", metavar="character"),
   make_option(c("--opacity"), type="character", default=".8,1",help="Point transparency of Antigen and Sera coordinates on the AC Map. Antigen,Sera. Example: \".9,.5\" or \".7,.4\"", metavar="character"),
   make_option(c("--agoverprint"), type="character", default="FALSE",help="Paint Antigens over Sera? TRUE or FALSE.", metavar="character"),
-  make_option(c("--agsort"), type="character", default="TRUE",help="Sort Antigen on Legend? TRUE or FALSE.", metavar="character")
+  make_option(c("--agsort"), type="character", default="TRUE",help="Sort Antigens on Legend? TRUE or FALSE.", metavar="character")
 )
 
 pargs = parse_args(OptionParser(option_list=option_list))
