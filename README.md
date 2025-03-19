@@ -22,6 +22,6 @@ do
         --psizes 5,2 \
         --opacity .8,1 \
         --agoverprint FALSE \
-        --agsort TRUE 
+        --agsort FALSE 
 done
 ```
